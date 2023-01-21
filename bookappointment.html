@@ -5,31 +5,79 @@
 <head>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link href="bookappointment.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <title>Book Appointment</title>
 </head>
 
-<body class="bg-gray-200 h-screen flex items-center justify-center">
+<body>
 
 <header class="header">
-  <link href="navbar.css" rel="stylesheet">
-  <a href="/profile.html"><img src="logos/Vaidhya.png"></a>
+  <!-- <link href="navbar.css" rel="stylesheet">
+  <a href="/homepage.html"><img src="logos/Vaidhya.png"></a> -->
 
-  <div class="flex-container">
+  <!-- <div class="flex-container">
     <nav class="navbar">
       <a href="/homepage.html">Home</a>
-      <a href="/appointment.html">Book</a>
+      <a href="/appointment.html">Book Appointment</a>
       <a href="/login.html" id="login">Sign In</a>
       <a href="/signup.html" id="signup">Sign Up</a>
       <a href="/myappointments.html" id="myapps" class="hidden">My Appointments</a>
       <a href="/profile.html" id="profile" class="hidden">My Profile</a>
     </nav>
-  </div>
+  </div> -->
 
-  <script src="navbar.js"></script>
+  <!-- <script src="navbar.js"></script> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+             <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html" style="margin-left: 900px; margin-top: 100px;">
+             <img src="logos/Vaidhya.png" height="2px" alt="MDB Logo" loading="lazy" style="align:center ;margin-bottom:15px" />
+            </a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+          
+          
+          <!-- Avatar -->
+          <div class="dropdown">
+                      <a class="nav-link" href="#" style="margin-right: 40px; margin-top: 3px; font-size: large;">Login</a>
+
+                
+                
+            </div>
+            <div>
+                <button class="button-34" role="button">Book appointment</button>
+        
+            </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
 
 </header>
 
-      <div class="container mx-auto" style="margin-top:10em;">
+      <div class="container mx-96" style="margin-top:10em;">
         <div id="not-logged-in" class="hidden bg-red-500 text-white p-4 rounded-lg text-center">
           You are not logged in.
         </div>
@@ -61,7 +109,11 @@
           </div>
           <div class="mb-4">
             <label class="block text-gray-700 font-medium mb-2" for="time">Time</label>
-            <input class="form-input py-2 px-3 text-gray-700" id="time" type="time">
+            <!-- <input class="form-input py-2 px-3 text-gray-700" id="time" type="button" onclick="getSlots()"> -->
+            <button class="button-34" onclick="myFunction(4)">Create Button</button>
+      </div>
+      <div id="button-container"></div>
+          
       </div>
       <div class="mb-4">
         <label class="block text-gray-700 font-medium mb-2" for="interaction-method">Interaction Method</label>
@@ -75,5 +127,7 @@
       </div>
 </body>
 <script src="bookappointment.js"></script>
+
+
 
 </html>

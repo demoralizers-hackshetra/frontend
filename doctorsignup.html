@@ -3,17 +3,18 @@
   <head>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Registration Page</title>
+    <link rel="stylesheet" href="doctorsignup.css">
   </head>
   <body class="bg-gray-200 h-screen flex items-center justify-center">
 
 <header class="header">
   <link href="navbar.css" rel="stylesheet">
-  <a href="/profile.html"><img src="logos/Vaidhya.png"></a>
+  <a href="/homepage.html"><img src="logos/Vaidhya.png"></a>
 
   <div class="flex-container">
     <nav class="navbar">
-      <a href="/homepage.html">Home</a>
-      <a href="/appointment.html">Book</a>
+      <!-- <a href="/homepage.html">Home</a> -->
+      <a href="/appointment.html">Book Appointment</a>
       <a href="/login.html" id="login">Sign In</a>
       <a href="/signup.html" id="signup">Sign Up</a>
       <a href="/myappointments.html" id="myapps" class="hidden">My Appointments</a>
@@ -24,7 +25,9 @@
   <script src="navbar.js"></script>
 
 </header>
-
+<div>
+  <h1 class="vaidhya mr-6 pr-96" style="color: white;"> Vaidhya.</h1>
+</div>
     <div class="w-full max-w-xs" style="margin-top:10em;">
       <form class="bg-white p-6 rounded-lg shadow-md" onsubmit="register(event)">
         <h1 class="text-lg font-medium mb-4">Sign Up</h1>
@@ -64,7 +67,7 @@
             required
           />
         </div>
-        <div class="mb-4">
+        <!-- <div class="mb-4">
           <label class="block text-gray-700 font-medium mb-2" for="password-repeat">
             Repeat Password
           </label>
@@ -77,7 +80,7 @@ required
 onchange="checkPasswordMatch()"
 />
 <div id="password-error" class="text-red-500 text-xs"></div>
-</div>
+</div> -->
 <div class="mb-4">
 <label class="block text-gray-700 font-medium mb-2" for="phone">
 Phone

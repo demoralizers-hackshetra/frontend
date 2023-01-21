@@ -17,3 +17,29 @@ tbody tr:hover {
   background-color: #f5f5f5;
   cursor: pointer;
 }
+:root{
+  --g1: rgb(98,0,234);
+  --g2: rgb(236,64,122);
+}
+
+@keyframes background-pan{
+  from{
+    background-position: 0% center;
+  }
+  to{
+    background-position: -200% center;
+  }
+}
+body{
+  animation: background-pan 10s linear infinite;
+  background: linear-gradient(
+  to right,
+  var(--g1),
+   var(--g2),
+    var(--g1)
+  );
+  background-size: 200%;
+}
+.header .navbar a:hover{
+  color: "green";
+}

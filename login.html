@@ -3,17 +3,18 @@
   <head>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
   </head>
   <body class="bg-gray-200 h-screen flex items-center justify-center">
 
 <header class="header">
   <link href="navbar.css" rel="stylesheet">
-  <a href="/profile.html"><img src="logos/Vaidhya.png"></a>
+  <a href="/homepage.html"><img src="logos/Vaidhya.png"></a>
 
   <div class="flex-container">
     <nav class="navbar">
-      <a href="/homepage.html">Home</a>
-      <a href="/appointment.html">Book</a>
+      <!-- <a href="/homepage.html">Home</a> -->
+      <a href="/appointment.html">Book Appointment</a>
       <a href="/login.html" id="login">Sign In</a>
       <a href="/signup.html" id="signup">Sign Up</a>
       <a href="/myappointments.html" id="myapps" class="hidden">My Appointments</a>
@@ -24,9 +25,12 @@
   <script src="navbar.js"></script>
 
 </header>
-    <div class="w-full max-w-xs" style="margin-top:10em;">
-      <form class="bg-white p-6 rounded-lg shadow-md" onsubmit="login(event)">
-        <h1 class="text-lg font-medium mb-4">Sign In</h1>
+<div>
+  <h1 class="vaidhya mr-6 pr-96" style="color: white;"> Vaidhya.</h1>
+</div>
+    <div class="w-full max-w-xs" style="margin-top:10m;">
+      <form class="bg-white p-16 px-10 rounded-lg shadow-md" onsubmit="login(event)">
+        <h1 class="text-3xl  font-medium mb-4 ">Sign In</h1>
         <div class="mb-4">
           <label class="block text-gray-700 font-medium mb-2" for="email">
             Email

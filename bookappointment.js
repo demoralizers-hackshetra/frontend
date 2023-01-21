@@ -48,6 +48,37 @@ if (!jwt) {
     const interactionMethod = document.getElementById('interaction-method').value;
     const datetime = date + ' ' + time + ":00";
 
+    fetch('http://127.0.0.1:3000/doctor/timeslots', {
+      method: 'POST',
+      headers: {
+        
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        doctor_id: docid,
+        date: "2023-01-21"
+      })
+    })
+    .then(response=>response.json())
+    .then(response => {
+      // Handle success/error
+      // window.location = "/myappointments.html";
+      var e = length(response);
+    })
+    .catch(error => {
+      console.error(error);
+      
+    });
+  });
+   
+  function myFunction(e){
+    for(let i = 0; i< e; i++){
+      let newBtn = document.createElement('button');
+      newBtn.innerText="Click me";
+      document.getElementById('button-container').appendChild(newBtn);
+    }
+  }
+
     // Make API call to http://127.0.0.1:3000/newappointment
     fetch('http://127.0.0.1:3000/newappointment', {
       method: 'POST',

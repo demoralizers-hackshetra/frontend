@@ -1,5 +1,5 @@
 .header{
-  padding:2rem 9%;
+  padding:1rem 9%;
   position: fixed;
   top:0; left: 0; right: 0;
   z-index: 1000;
@@ -8,20 +8,21 @@
   align-items: center;
   justify-content: space-between;
   background: #fff;
+  color: #777777;
+  font-family: 'Poppins', sans-serif;
 }
 
 .header img {
   max-width:30%;
 }
 
-.header .navbar a{
-  font-size: 1.5rem;
+.header .navbar a {
   color: var(--light-color);
   margin-left: 2rem;
 }
 
 .header .navbar a:hover{
-  color: var(--green);
+  color: "green";
 }
 
 .hidden {
