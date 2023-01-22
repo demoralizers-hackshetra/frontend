@@ -1,6 +1,10 @@
 .hidden {
   display: none;
 }
+.slotBtn{
+  margin: 10px;
+  padding: 10px;
+}
 .button-34 {
   background: #5E5DF0;
   border-radius: 999px;
