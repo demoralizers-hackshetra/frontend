@@ -1,7 +1,9 @@
 .table-auto {
     width: 100%;
   }
-  
+  .hidden {
+    display: none;
+  }
   .table-auto th,
   .table-auto td {
     border-bottom: 1px solid #ddd;
