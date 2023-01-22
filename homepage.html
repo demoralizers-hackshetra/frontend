@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaidhya</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="login1.css">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="homepage.css">
- <style></style>
+    <style></style>
 </head>
+
 <body>
 
-<!-- header section starts  -->
-<header class="header" style=";">
-    <!-- <link href="navbar.css" rel="stylesheet">
+    <!-- header section starts  -->
+    <header class="header" style=";">
+        <!-- <link href="navbar.css" rel="stylesheet">
     <a href="/homepage.html"><img src="logos/Vaidhya.png"></a>
   
     <div class="flex-container" style="font-size:medium;">
@@ -34,174 +36,275 @@
     </div>
   
     <script src="navbar.js"></script> -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-          <!-- Toggle button -->
-          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-    
-          <!-- Collapsible wrapper -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-           
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              
-                 <!-- Navbar brand -->
-                <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html" style="margin-left: 900px; margin-top: 100px;">
-                 <img src="logos/Vaidhya.png" height="70" alt="MDB Logo" loading="lazy" style="align:center ;margin-bottom:15px" />
-                </a>
-              </li>
-            </ul>
-            <!-- Left links -->
-          </div>
-          <!-- Collapsible wrapper -->
-    
-          <!-- Right elements -->
-          <div class="d-flex align-items-center">
-              
-              
-              <!-- Avatar -->
-              <div class="dropdown">
-                          <a class="nav-link" href="#" style="margin-right: 40px; margin-top: 3px; font-size: large;">Login</a>
-    
-                    
-                    
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand mt-2 mt-lg-0" href="homepage.html"
+                            style="margin-left: 900px; margin-top: 100px;">
+                            <img src="logos/Vaidhya.png" height="70" alt="MDB Logo" loading="lazy"
+                                style="align:center ;margin-bottom:15px" />
+                        </a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
                 </div>
-                <div>
-                    <button class="button-34" role="button">Book appointment</button>
-            
+                <!-- Collapsible wrapper -->
+
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+
+
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <button type="button" class="button-34" data-toggle="modal" data-target="#exampleModal" style="font-weight: normal;">
+                            Log in/ Sign up
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div style="background-color: transparent;" class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Vaidhya</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body signin_modal">
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+                                                    role="tab" aria-controls="home" aria-selected="true">Sign up</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile"
+                                                    role="tab" aria-controls="profile" aria-selected="false">Log in</a>
+                                            </li>
+                                        </ul>
+                                        <div class="social_login">
+                                            <p id="para1">with your social login</p>
+                                            <ul class="social_log">
+                                                <li><img height="40px" src="apple.png" alt=""></li>
+                                                <li><img height="40px" src="facebook.svg" alt=""></li>
+                                                <li><img height="40px" src="google.svg" alt=""></li>
+                                            </ul>
+                                            <p id="para2">or</p>
+                                            <div class="tab-content signin_tab" id="myTabContent">
+                                                <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                                    aria-labelledby="home-tab">
+                                                    <form onsubmit="register(event)">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                id="name" aria-describedby="textHelp"
+                                                                placeholder="name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control"
+                                                                id="email" aria-describedby="emailHelp"
+                                                                placeholder="email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                id="phone" aria-describedby="textHelp"
+                                                                placeholder="phone number">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" class="form-control"
+                                                                id="password" placeholder="Password">
+
+                                                        </div>
+                                                        <button type="submit"
+                                                            class="button-34">Submit</button>
+                                                    </form>
+                                                </div>
+                                                <div class="tab-pane fade" id="profile" role="tabpanel"
+                                                    aria-labelledby="profile-tab">
+                                                    <form onsubmit="login(event)">
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control"
+                                                                id="email" aria-describedby="emailHelp"
+                                                                placeholder="email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" class="form-control"
+                                                                id="password" placeholder="Password">
+
+                                                        </div>
+                                                        <div style="margin-top: 20px;">
+                                                            <button type="submit" class="button-34" >Submit</button>
+
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                            crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+                            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                            crossorigin="anonymous"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+                            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                            crossorigin="anonymous"></script>
+                    </div>
+                    <div>
+                        <button class="button-34" role="button">
+                            <a style="color: white; text-decoration: none; font-weight: normal;" href="/appointment.html"> Book appointment </a></button>
+                    </div>
                 </div>
-          </div>
-          <!-- Right elements -->
-        </div>
-        <!-- Container wrapper -->
-      </nav>
-      <!-- Navbar -->
-  
-  </header>
-<!-- header section ends -->
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
 
-<!-- home section starts  -->
+    </header>
+    <!-- header section ends -->
 
-<section class="home" id="home" style="background-color: #E3F6FF;">
+    <!-- home section starts  -->
 
-    <div class="image">
-        <img height="650px" src="logos/doctor.svg" alt="">
-    </div>
-
-    <div class="content">
-        <h3>All in One Healthcare Management System</h3>
-        <p>Book appointments, find doctors near you at affordable prices for a variety of services, all in one place!</p>
-        <!-- <a href="/appointment.html" style="color: blue; background-color: lightblue;" class="btn">Get started!</span> </a> -->
-    </div>
-
-</section>
-
-<!-- home section ends -->
-
-<!-- icons section starts  -->
-
-<section class="icons-container">
-
-    <div class="icons">
-        <i class="fas fa-user-md"></i>
-        <h3>140+</h3>
-        <p>doctors at work</p>
-    </div>
-
-    <div class="icons">
-        <i class="fas fa-users"></i>
-        <h3>1000+</h3>
-        <p>satisfied patients</p>
-    </div>
-
-    <div class="icons">
-        <i class="fas fa-hospital"></i>
-        <h3>6+</h3>
-        <p>cities</p>
-    </div>
-
-</section>
-
-<!-- icons section ends -->
-
-<!-- services section starts  -->
-
-<section class="services" id="services">
-
-    <h1 class="heading"> our <span>services</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <i class="fas fa-notes-medical"></i>
-            <h3>Book Appointments Easily</h3>
-            <p>With our simple process, book an appointment with a doctor at a price that suits you at a time of your choosing</p>
-            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-user-md"></i>
-            <h3>Expert doctors</h3>
-            <p>All our doctors are verifed by us before being listed on our platform</p>
-            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-pills"></i>
-            <h3>View prescriptions</h3>
-            <p>View prescriptions prescribed by your doctor and show to participating dispensaries for added security</p>
-            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-heartbeat"></i>
-            <h3>total care</h3>
-            <p>We help doctors manage their appointments so they can go and give the best care to everyone</p>
-            <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- services section ends -->
-
-<!-- about section starts  -->
-
-<section class="about" id="about">
-
-    <h1 class="heading"> <span>about</span> us </h1>
-
-    <div class="row">
+    <section class="home" id="home" style="background-color: #E3F6FF;">
 
         <div class="image">
-            <img src="logos/about-img.svg" alt="">
+            <img height="650px" src="logos/doctor.svg" alt="">
         </div>
 
         <div class="content">
-            <h3>We help give you better care</h3>
-            <p>Our platform is not just to help people book appointments, it also allows doctors to list themselves for others to find and seek help from.</p>
-            <p>Doctors use our inbuilt appointment management system to facilitate more efficient care by letting us handle the bureaucracy</p>
+            <h3>All in One Healthcare Management System</h3>
+            <p>Book appointments, find doctors near you at affordable prices for a variety of services, all in one
+                place!</p>
+            <!-- <a href="/appointment.html" style="color: blue; background-color: lightblue;" class="btn">Get started!</span> </a> -->
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- home section ends -->
 
-<!-- about section ends -->
+    <!-- icons section starts  -->
 
-<!-- doctors section starts  -->
-<!-- doctors section ends -->
+    <section class="icons-container">
 
-<!-- booking section starts   -->
-<!-- booking section ends -->
+        <div class="icons">
+            <i class="fas fa-user-md"></i>
+            <h3>140+</h3>
+            <p>doctors at work</p>
+        </div>
 
-<!-- review section starts  -->
-<!--
+        <div class="icons">
+            <i class="fas fa-users"></i>
+            <h3>1000+</h3>
+            <p>satisfied patients</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-hospital"></i>
+            <h3>6+</h3>
+            <p>cities</p>
+        </div>
+
+    </section>
+
+    <!-- icons section ends -->
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3>Book Appointments Easily</h3>
+                <p>With our simple process, book an appointment with a doctor at a price that suits you at a time of
+                    your choosing</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>Expert doctors</h3>
+                <p>All our doctors are verifed by us before being listed on our platform</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-pills"></i>
+                <h3>View prescriptions</h3>
+                <p>View prescriptions prescribed by your doctor and show to participating dispensaries for added
+                    security</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-heartbeat"></i>
+                <h3>total care</h3>
+                <p>We help doctors manage their appointments so they can go and give the best care to everyone</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="logos/about-img.svg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>We help give you better care</h3>
+                <p>Our platform is not just to help people book appointments, it also allows doctors to list themselves
+                    for others to find and seek help from.</p>
+                <p>Doctors use our inbuilt appointment management system to facilitate more efficient care by letting us
+                    handle the bureaucracy</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+    <!-- doctors section starts  -->
+    <!-- doctors section ends -->
+
+    <!-- booking section starts   -->
+    <!-- booking section ends -->
+
+    <!-- review section starts  -->
+    <!--
 <section class="review" id="review">
 
     <h1 class="heading"> client's <span>review</span> </h1>
@@ -252,67 +355,70 @@
 </section>
 
 -->
-<!-- review section ends -->
+    <!-- review section ends -->
 
-<!-- blogs section starts  -->
+    <!-- blogs section starts  -->
 
-<!-- blogs section ends -->
+    <!-- blogs section ends -->
 
-<!-- footer section starts  -->
+    <!-- footer section starts  -->
 
 
-<section class="footer">
+    <section class="footer">
 
-    <div class="box-container">
+        <div class="box-container">
 
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
+            </div>
+
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+                <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
+                <a href="#"> <i class="fas fa-envelope"></i> anasbhai@gmail.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+            </div>
+
         </div>
 
-        <div class="box">
-            <h3>our services</h3>
-            <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
-        </div>
 
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-            <a href="#"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
-            <a href="#"> <i class="fas fa-envelope"></i> anasbhai@gmail.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
-        </div>
+    </section>
 
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
-        </div>
+    <!-- footer section ends -->
 
-    </div>
-
-
-</section>
-
-<!-- footer section ends -->
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="login.js"></script>
+    <script src="signup.js"></script>
 
 </body>
+
 </html>

@@ -77,11 +77,11 @@
     <h1 class="text-left-right">
     <span class="left-text">
       <p style="font-size:20px;">Your Token Number</p>
-      <p style="font-size:20px;margin-right:90px">65</p>
+      <p id="yourTkn" style="font-size:20px;margin-right:90px">65</p>
      </span>
     <span class="byline">
       <p style="font-size:20px;">Current Token Number</p>
-      <p style="font-size:20px; margin-right:90px">75</p>
+      <p id="currTkn" style="font-size:20px; margin-right:90px">75</p>
     </span>
   </h1>
 </div>
@@ -100,14 +100,14 @@
 
           <div>
             <label for="address">City</label>
-            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+            <input type="text" class="form-control" id="address" placeholder="" required>
           </div>
 
 
           <div class="row">
             <div>
               <label for="firstName">Prescription Fee</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <input type="text" class="form-control" id="price" placeholder="" value="" required>
             </div>
 
 
@@ -117,13 +117,13 @@
                 <div class="row">
                   <div >
                     <label for="firstName">Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <input type="text" class="form-control" id="firstName" placeholder="Saksham" value="" required>
                   </div>
                 </div>
 
                   <div class="mb-3">
                     <label for="address">Gender</label>
-                    <input type="text" class="form-control" id="address" placeholder="Male/Female/Transgeneer" required>
+                    <input type="text" class="form-control" id="address" placeholder="Male" required>
                   </div>
 
 
@@ -145,7 +145,8 @@
 
                     <div class="" style="margin-top:20px">
 
-                      <button type="button" name="button" class="button-34"> Proceed and Pay</button>
+                      <button type="button" name="button" class="button-34"> 
+                        <a style="color: white; text-decoration: none; font-weight: normal;" href="/payment.html">Proceed and Pay</a> </button>
                     </div>
 
 
@@ -183,6 +184,7 @@
             }, false);
           })();
         </script>
+        <script src="token.js"></script>
 </body>
 
 </html>
